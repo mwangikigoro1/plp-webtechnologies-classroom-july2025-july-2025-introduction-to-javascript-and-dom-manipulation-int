@@ -1,0 +1,128 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #4B0082; /* Deep purple */
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid white;
+}
+
+/* Grid layout for main content */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.content {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Flexbox for cards */
+.card-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Gold-framed image styling */
+.image-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.image-gallery img {
+  border: 5px solid gold;
+  border-radius: 10px;
+  width: 200px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .image-gallery img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
